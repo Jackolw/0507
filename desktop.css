@@ -60,10 +60,22 @@
             text-decoration: none;
             color: #e2e2e2;
         }
-        nav .menu a:haver{
-            color:#fa0;
+       
+            
     }
-        
+    nav .menu a::after{
+    content: "";
+    border-bottom: 2px solid #fa0;
+        display:block;
+        margin-top: -15px;
+        width:0;
+        transform:scaleX(0);
+        transition: all .3s;
+        }
+     nav .menu a:hover::after{
+         width: 100%;
+         transform:scaleX(1);
+}
         header {
             padding-top: 300px;
             padding-bottom: 300px;
@@ -117,7 +129,8 @@
         }
         .btn:hover{
             background-color:#ccc;
-            color:#000
+            color:#000;
+            transition: all .3s    
           }
         .btn-inverse {
             display: inline-block;
